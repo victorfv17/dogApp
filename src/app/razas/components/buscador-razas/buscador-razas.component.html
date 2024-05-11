@@ -1,0 +1,19 @@
+<div class="contenedor">
+
+    <mat-form-field class="input-width">
+        <mat-label>
+            <mat-icon class="material-icons">
+                search
+            </mat-icon> Buscador de razas perros</mat-label>
+        <input matInput [(ngModel)]="terminoBusqueda" (ngModelChange)="buscarRaza()" #buscar="ngModel">
+    </mat-form-field>
+
+
+    <mat-card class="card" *ngIf="razaEncontrada">
+        <mat-card-header>
+            <mat-card-title>{{razaEncontrada | titlecase}}</mat-card-title>
+        </mat-card-header>
+        <img class="imagen" mat-card-image src="{{raza.message}}" alt="foto ilustrativa de la raza">
+    </mat-card>
+    <p *ngIf="!razaEncontrada && buscar.touched"> No hay resultados</p>
+</div>

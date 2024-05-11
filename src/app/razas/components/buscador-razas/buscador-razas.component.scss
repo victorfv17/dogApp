@@ -1,0 +1,22 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.input-width {
+    width: 30%;
+    min-width: 30em;
+}
+
+.card {
+    width: 30%;
+    min-width: 30em;
+}
+
+.imagen {
+    background-size: cover;
+}
